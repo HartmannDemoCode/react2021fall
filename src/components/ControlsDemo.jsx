@@ -14,7 +14,9 @@ import {
 
 import AlertsDemo from './AlertsDemo';
 import ButtonsDemo from './ButtonsDemo';
-// import ButtonsDemo from './ButtonsDemo';
+import CarouselsDemo from './Carousel';
+import FormsDemo from './FormsDemo';
+import ModalsDemo from './ModalsDemo';
 
 // const url = 'https://jsonplaceholder.typicode.com/albums/1/photos';
 export default (props) => {
@@ -26,8 +28,8 @@ return (
     <li><Link to={`${url}/buttons`}>BreadCrumbs and Buttons</Link></li>
     <li><Link to={`${url}/carousel`}>Carousel</Link></li>
     <li><Link to={`${url}/forms`}>Form components</Link></li>
-    <li><Link to={`${url}/images`}>Images and Figures</Link></li>
     <li><Link to={`${url}/modals`}>Modals</Link></li>
+    <li><Link to={`${url}/images`}>Images and Figures</Link></li>
     <li><Link to={`${url}/overlays`}>Overlays</Link></li>
     <li><Link to={`${url}/table`}>Tables</Link></li>
     <li><Link to={`${url}/tabs`}>Tabs</Link></li>
@@ -58,8 +60,17 @@ const Topic = () => {
         case 'buttons':
           return <ButtonsDemo/>;
           break;
+        case 'carousel':
+          return <CarouselsDemo/>;
+          break;
+        case 'forms':
+          return <FormsDemo/>;
+          break;
+        case 'modals':
+          return <ModalsDemo/>;
+          break;
         default:
-          // code block
+          return <h2>Not implemented</h2>;
       }
     }
 

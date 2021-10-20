@@ -11,7 +11,7 @@ const MyBreadCrumbs = () => {
             {pathParts.map((part,idx)=>{
                 if(part === '')
                     return '';
-                const sambled = pathParts.slice(1,idx+1).join('/');
+                const sambled = pathParts.slice(1,idx+1).join('/');//join the paths up to this one
                 return <Breadcrumb.Item href={`/${sambled}`}>{part}</Breadcrumb.Item>
             })}
         </Breadcrumb>
@@ -29,7 +29,9 @@ const BottonsDemo = () => {
         'warning',
         'info',
         'light',
-        'dark'].map((variant, idx) => <Button variant={variant}>{variant}</Button>)}
+        'dark',
+        'outline-primary',
+        'outline-danger'].map((variant, idx) => <Button variant={variant}>{variant}</Button>)}
     </>);
 };
 

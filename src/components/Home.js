@@ -3,6 +3,10 @@ const desc = [
     {'id':2,'title':'Accordion Demo','description':'Shows how to use bootstrap accordion component with image and link (For some reason the image from placeholder does not show. Instead another static image is shown.','link':'/accordion'},
     {'id':3,'title':'Pagination Demo','description':'Pagination Demo uses the local jsonserver to serve up 2000 person records (remember to start the server with npm run postbackend before using the pagination tab). Shows examples of: conditional rendering, bootstrap table with stripes, useEffect with observer','link':'/pagination'},
     {'id':4,'title':'Bootstrap Controls Demo ','description':'Show cases several different components from bootstrap','link':'/controls'},
+    {'id':5,'title':'Breadcrumbs and bottons','description':'sub route under /controls. Shows how to use the hool: useLocation() to get the url and transform it to interactive bread crumbs. Additionally shows severeal bootstrap buttons','link':'/controls/buttons'},
+    {'id':6,'title':'Carousel','description':'Shows how to use bootstrap Carousel to show images. Also shows how to use images in 3 ways: import, require("location").default, and with web url','link':'/controls/carousel'},
+    {'id':7,'title':'Forms','description':'Shows how to use the many different bootstrap form elements','link':'/'},
+    {'id':8,'title':'Modal','description':'Shows how to use different types of bootstrap modals','link':'/'},
     // {'id':4,'title':'','description':'','link':'/'},
 ];
 export default (props) => {
