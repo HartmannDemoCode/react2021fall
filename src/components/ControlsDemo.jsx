@@ -17,6 +17,7 @@ import ButtonsDemo from './ButtonsDemo';
 import CarouselsDemo from './Carousel';
 import FormsDemo from './FormsDemo';
 import ModalsDemo from './ModalsDemo';
+import FlipCards from './flipcards/FlipCards';
 
 // const url = 'https://jsonplaceholder.typicode.com/albums/1/photos';
 export default (props) => {
@@ -30,8 +31,9 @@ return (
     <li><Link to={`${url}/forms`}>Form components</Link></li>
     <li><Link to={`${url}/modals`}>Modals</Link></li>
     <li><Link to={`${url}/images`}>Images and Figures</Link></li>
+    <li><Link to={`${url}/flipCards`}>Flip cards</Link></li>
     <li><Link to={`${url}/overlays`}>Overlays</Link></li>
-    <li><Link to={`${url}/table`}>Tables</Link></li>
+    <li><Link to={`${url}/tables`}>Tables</Link></li>
     <li><Link to={`${url}/tabs`}>Tabs</Link></li>
     </ul>
 
@@ -68,6 +70,12 @@ const Topic = () => {
           break;
         case 'modals':
           return <ModalsDemo/>;
+          break;
+        case 'tables':
+          return <h2>Not yet implemented, but see example in pagination tab</h2>;
+          break;
+        case 'flipCards':
+          return <FlipCards/>;
           break;
         default:
           return <h2>Not implemented</h2>;

@@ -16,7 +16,7 @@ export default (props) => {
         console.time("fetching");
         setState({ msg: "Loading..." });
         const res = await fetch(`http://localhost:1234/api?_start=${(page-1)*elementsPrPage}&_end=${(page-1)*elementsPrPage + elementsPrPage}`);
-        setCount(res.headers.get('X-Total-Count'));
+        setCount(res.headers.get('X-Total-Count')); //read header with name: X-Total-Count that the server/backend produces.
         const names = await res.json();
         console.timeEnd("fetching");
         setState({ names, msg: "" });

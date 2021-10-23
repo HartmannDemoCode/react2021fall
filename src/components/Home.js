@@ -5,20 +5,21 @@ const desc = [
     {'id':4,'title':'Bootstrap Controls Demo ','description':'Show cases several different components from bootstrap','link':'/controls'},
     {'id':5,'title':'Breadcrumbs and bottons','description':'sub route under /controls. Shows how to use the hool: useLocation() to get the url and transform it to interactive bread crumbs. Additionally shows severeal bootstrap buttons','link':'/controls/buttons'},
     {'id':6,'title':'Carousel','description':'Shows how to use bootstrap Carousel to show images. Also shows how to use images in 3 ways: import, require("location").default, and with web url','link':'/controls/carousel'},
-    {'id':7,'title':'Forms','description':'Shows how to use the many different bootstrap form elements','link':'/'},
-    {'id':8,'title':'Modal','description':'Shows how to use different types of bootstrap modals','link':'/'},
+    {'id':7,'title':'Forms','description':'Shows how to use the many different bootstrap form elements','link':'/controls/forms'},
+    {'id':8,'title':'Modal','description':'Shows how to use different types of bootstrap modals. Including a Form modal','link':'/controls/modals'},
+    {'id':9,'title':'Flip Cards','description':'Use of only CSS to show flip cards','link':'/controls/flipCards'}
     // {'id':4,'title':'','description':'','link':'/'},
 ];
 export default (props) => {
     return (<>
     <ul>
-        {desc.map(bullet=>{
+        {desc.map((bullet,idx)=>{
             return (
-                <>
+                <li key={idx}>
                 <h3>{bullet.title}</h3>
                 <p>{bullet.description}</p>
                 <b><a href={bullet.link}>Show me</a></b>
-                </>
+                </li>
             );
         })}
     </ul>
