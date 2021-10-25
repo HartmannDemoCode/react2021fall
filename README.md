@@ -1,4 +1,4 @@
-# Getting Started with Create React App
+# Demo code to show case many different (bootstrap mostly) controls and techniques
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
@@ -39,6 +39,26 @@ Instead, it will copy all the configuration files and the transitive dependencie
 
 You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
+### `npm run deploy`
+From the git branch `gh-pages`.
+This will deploy the project to github pages (url is configured in package.json homepage key (at the very top)).
+Project can now be found on `https://hartmanndemocode.github.io/react2021fall`.
+
+
+
+##### Further study:
+https://create-react-app.dev/docs/deployment/#github-pages and https://github.com/rafgraph/spa-github-pages
+
+
+In essence 2 steps were taken to make this repo with React Router run on github pages:
+1. added the 404.html page to the root of the project (changed one setting inside the 404.html page (see comment in page))
+2. added a script tag to the index.html page (see the tag in the public/index.html file)
+
+
+### `npm run postbackend`
+This will run the backend server locally. Data from this is used in the pagination demo.
+
+
 ## Learn More
 
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
@@ -68,4 +88,5 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-# repo auto created
+
+

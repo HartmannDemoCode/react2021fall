@@ -18,6 +18,7 @@ import CarouselsDemo from './Carousel';
 import FormsDemo from './FormsDemo';
 import ModalsDemo from './ModalsDemo';
 import FlipCards from './flipcards/FlipCards';
+import InfiniteScroll from './infinite/InfiniteScroll';
 
 // const url = 'https://jsonplaceholder.typicode.com/albums/1/photos';
 export default (props) => {
@@ -32,6 +33,7 @@ return (
     <li><Link to={`${url}/modals`}>Modals</Link></li>
     <li><Link to={`${url}/images`}>Images and Figures</Link></li>
     <li><Link to={`${url}/flipCards`}>Flip cards</Link></li>
+    <li><Link to={`${url}/infiniteScroll`}>Infinite scroll</Link></li>
     <li><Link to={`${url}/overlays`}>Overlays</Link></li>
     <li><Link to={`${url}/tables`}>Tables</Link></li>
     <li><Link to={`${url}/tabs`}>Tabs</Link></li>
@@ -77,8 +79,11 @@ const Topic = () => {
         case 'flipCards':
           return <FlipCards/>;
           break;
+        case 'infiniteScroll':
+          return <InfiniteScroll/>;
+          break;
         default:
-          return <h2>Not implemented</h2>;
+          return <h2>No such component</h2>;
       }
     }
 
