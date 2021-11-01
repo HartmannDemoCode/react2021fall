@@ -21,9 +21,9 @@ export default (props) => {
     }, []);
     return (
         <>
-            <Carousel>
+            <Carousel>  
                 <Carousel.Item>
-                    <img style={{ 'height': "300px" }}
+                    <img style={{ 'height': "700px" }}
                         className="d-block w-100"
                         src="https://media.geeksforgeeks.org/wp-content/uploads/20210425122739/2-300x115.png"
                         alt="First slide"
@@ -34,7 +34,7 @@ export default (props) => {
                     </Carousel.Caption>
                 </Carousel.Item>
                 <Carousel.Item>
-                    <img style={{ 'height': "300px" }}
+                    <img style={{ 'height': '700px' }}
                         className="d-block w-100"
                         src={require('../images/lotus3.jpg').default} 
                         alt="Second slide"
@@ -46,7 +46,7 @@ export default (props) => {
                     </Carousel.Caption>
                 </Carousel.Item>
                 <Carousel.Item>
-                    <img style={{ 'height': "300px" }}
+                    <img style={{ 'height': '700px' }}
                         className="d-block w-100"
                         src={lotus} />
                     <Carousel.Caption>
@@ -56,7 +56,7 @@ export default (props) => {
                 </Carousel.Item>
                 {images.map((imgObj) =>
                     <Carousel.Item>
-                        <img style={{ 'height': "300px" }}
+                        <img style={{ 'height': '700px' }}
                             className="d-block w-100"
                             src={require(`../images/${imgObj.src}`).default} />
                         <Carousel.Caption>

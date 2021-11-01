@@ -18,7 +18,8 @@ export default (props) => {
                 <li key={idx}>
                 <h3>{bullet.title}</h3>
                 <p>{bullet.description}</p>
-                <b><a href={bullet.link}>Show me</a></b>
+                {/* added /react2021fall before the relative link is needed when deploying the solution to nginx */}
+                <b><a href={`/react2021fall${bullet.link}`}>Show me</a></b>
                 </li>
             );
         })}

@@ -1,6 +1,12 @@
 # Demo code to show case many different (bootstrap mostly) controls and techniques
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+1. This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+2. This project uses bootstrap for styling: `npm install react-bootstrap@next bootstrap@5.1.1`;
+3. This project is deployed to nginx on digital ocean: [See mini guide here](https://github.com/HartmannDemoCode/pages/blob/master/react/deploy_react_router.md)
+4. After `npm start` Go to the Home tab for introduction to the different demos in this application demo.
+5. Live version at: https://edu.bugelhartmann.dk/react2021fall/controls/
+6. Changes to this repo: `gitp "update"` and `npm run deploy` will update the github repo and publish the changes to the live version.
+
 
 ## Available Scripts
 
@@ -29,34 +35,12 @@ Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
 ### `npm run deploy`
-From the git branch `gh-pages`.
-This will deploy the project to github pages (url is configured in package.json homepage key (at the very top)).
-Project can now be found on `https://hartmanndemocode.github.io/react2021fall`.
-
-
-
-##### Further study:
-https://create-react-app.dev/docs/deployment/#github-pages and https://github.com/rafgraph/spa-github-pages
-
-
-In essence 2 steps were taken to make this repo with React Router run on github pages:
-1. added the 404.html page to the root of the project (changed one setting inside the 404.html page (see comment in page))
-2. added a script tag to the index.html page (see the tag in the public/index.html file)
-
+This will execute the `./script.sh` file which both build the application and copies it to the server location. See more at [github](https://github.com/HartmannDemoCode/pages/blob/master/react/deploy_react_router.md)
 
 ### `npm run postbackend`
-This will run the backend server locally. Data from this is used in the pagination demo.
+This will run the backend server locally. Data from this can be used in the pagination demo (with small changes in commented code in PaginationDemo.js).
 
 
 ## Learn More
@@ -64,29 +48,4 @@ This will run the backend server locally. Data from this is used in the paginati
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
 To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-
 

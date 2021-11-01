@@ -1,8 +1,7 @@
 //npm install react-bootstrap@next bootstrap@5.1.1
-import { Card, Container, Row, Col, Modal, Form, Button } from 'react-bootstrap';
+import {Row, Col} from 'react-bootstrap';
 
-import Accordion from 'react-bootstrap/Accordion';
-import React, { useState, useEffect } from 'react';
+import React, { useState} from 'react';
 import './FlipCards.css'
 const images = [
     { 'src': 'lotus1.jpg', 'caption': 'Nulla vitae elit libero, a pharetra augue mollis interdum.', 'header': 'First image' },
@@ -13,7 +12,7 @@ const images = [
     { 'src': 'lotus6.jpg', 'caption': 'Nulla vitae elit libero, a pharetra augue mollis interdum.', 'header': 'Sixth image' }
 ];
 export default (props) => {
-    const [state, setState] = useState([]);
+    // const [state, setState] = useState([]);
 
     return (
         <>

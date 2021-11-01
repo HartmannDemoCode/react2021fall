@@ -6,7 +6,7 @@ import bookFacade from "./bookFacade";
 import { BrowserRouter as Router } from "react-router-dom";
 
 const AppWithRouter = () => {
-    return ( <Router basename="/react2021fall/">
+    return ( <Router basename="/react2021fall">
         <App bookFacade = { bookFacade }/> 
         </Router>
     );

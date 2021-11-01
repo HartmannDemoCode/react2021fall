@@ -38,7 +38,7 @@ return (
     <li><Link to={`${url}/tables`}>Tables</Link></li>
     <li><Link to={`${url}/tabs`}>Tabs</Link></li>
     </ul>
-
+    <hr style={{color:'blue',height:'5px'}}/>
     <Switch>
     <Route exact path={path}>
         <h3>Please select a topic.</h3>

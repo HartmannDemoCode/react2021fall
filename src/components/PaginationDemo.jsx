@@ -9,13 +9,16 @@ export default (props) => {
     const [page, setPage] = useState(1);
     const [paginationNumbers, setPaginationNumbers] = useState([1,2,3])
     const pages = count ? count / 20 : 0; //20 elements pr. page
-    const columns = ['#', 'Gender', 'First Name', 'Last Name', 'Email'];
+    const columns = ['#', 'Title', 'Url', 'Thumbnail Url', 'Url'];
+    // const columns = ['#', 'Gender', 'First Name', 'Last Name', 'Email'];
     const elementsPrPage = 20;
 
     const loadData = async () => {
         console.time("fetching");
         setState({ msg: "Loading..." });
-        const res = await fetch(`http://localhost:1234/api?_start=${(page-1)*elementsPrPage}&_end=${(page-1)*elementsPrPage + elementsPrPage}`);
+        // const res = await fetch(`http://localhost:1234/api?_start=${(page-1)*elementsPrPage}&_end=${(page-1)*elementsPrPage + elementsPrPage}`);
+        const res = await fetch(`https://jsonplaceholder.typicode.com/photos?_page=${(page)}&_limit=${elementsPrPage}`);
+        https://jsonplaceholder.typicode.com/photos?_page=7&_limit=20
         setCount(res.headers.get('X-Total-Count')); //read header with name: X-Total-Count that the server/backend produces.
         const names = await res.json();
         console.timeEnd("fetching");
@@ -48,7 +51,8 @@ export default (props) => {
             <tbody>
                 {state.names && state.names.map(name => {
                     return (
-                        <tr key={name.id}><td>{name.id}</td><td>{name.gender}</td><td>{name.firstName}</td><td>{name.lastName}</td><td>{name.email}</td></tr>
+                        // <tr key={name.id}><td>{name.id}</td><td>{name.gender}</td><td>{name.firstName}</td><td>{name.lastName}</td><td>{name.email}</td></tr>
+                        <tr key={name.id}><td>{name.id}</td><td>{name.title}</td><td>{name.url}</td><td>{name.thumbnailUrl}</td><td>{name.url}</td></tr>
                     );
                 })}
             </tbody>

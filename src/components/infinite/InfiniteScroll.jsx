@@ -31,8 +31,8 @@ function App() {
   return (
     <div className="infinite">
       <h1>Infinite Scroll</h1>
-      <h2>with IntersectionObserver</h2>
-      <input type="text" value={query} onChange={handleChange} />
+      <h4>with IntersectionObserver</h4>
+      <input type="text" value={query} onChange={handleChange} placeholder="Input here to start filter"/>
       <div>
         {list.map((book, i) => (
           <div key={i}>{book}</div>

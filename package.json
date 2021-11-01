@@ -1,5 +1,5 @@
 {
-    "homepage": "https://HartmannDemoCode.github.io/react2021fall",
+    "homepage": "/react2021fall",
     "name ": "react-demos",
     "version": "0.1.0",
     "private": true,
@@ -9,6 +9,7 @@
         "@testing-library/user-event": "^12.8.3",
         "axios": "^0.23.0",
         "bootstrap": "^5.1.1",
+        "casual": "^1.6.2",
         "dk_test_names": "^1.1.0",
         "json-server": "^0.17.0",
         "react": "^17.0.2",
@@ -21,8 +22,7 @@
     "scripts": {
         "start": "react-scripts start",
         "build": "react-scripts build",
-        "predeploy": "npm run build",
-        "deploy": "gh-pages -d build",
+        "deploy": "bash ./script.sh",
         "test": "react-scripts test",
         "eject": "react-scripts eject",
         "backend": "node data/makeData",
